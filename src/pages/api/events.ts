@@ -20,7 +20,7 @@ export default function handler(
       clearInterval(intervalId);
       res.end();
     }
-  }, 100);
+  }, 200);
 
   req.on('close', () => {
     clearInterval(intervalId);
