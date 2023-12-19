@@ -16,8 +16,21 @@ export default function Home() {
   }, []);
 
   return (
-    <div>
-      <p>{message}</p>
+   <div className="message-box">
+      <p>{message}<span className="cursor">■</span></p>
+
+      <style jsx>{`
+        .cursor {
+          opacity: 1;
+          animation: blink-animation 0.5s steps(5, start) infinite;
+        }
+        @keyframes blink-animation {
+          to {
+            opacity: 0;
+          }
+        }
+      `}</style>
     </div>
   );
 }
+
