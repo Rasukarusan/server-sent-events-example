@@ -1,5 +1,5 @@
 import type { NextApiRequest, NextApiResponse } from 'next'
-import { text } from './_text';
+import text from './_text';
 
 export default function handler(
   req: NextApiRequest,
@@ -10,17 +10,16 @@ export default function handler(
   res.setHeader('Connection', 'keep-alive');
   res.setHeader('Content-Encoding', 'none');
 
-  const str = text()
   let index = 0;
   const intervalId = setInterval(() => {
-    if (index < str.length) {
-      res.write(`data: ${str[index]}\n\n`);
+    if (index < text.length) {
+      res.write(`data: ${text[index]}\n\n`);
       index++;
     } else {
       clearInterval(intervalId);
       res.end();
     }
-  }, 200);
+  }, 100);
 
   req.on('close', () => {
     clearInterval(intervalId);
