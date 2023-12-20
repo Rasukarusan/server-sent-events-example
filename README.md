@@ -2,6 +2,10 @@
 ChatGPTのようなリアルタイムで文字が入力されていくUIを実装するためのデモ。  
 Server Sent Event (SSE)の実装方法をいくつか試しました。
 
+<kbd>
+<img width="575" alt="image" src="https://github.com/Rasukarusan/server-sent-events-example/assets/17779386/5ee52b04-66b1-4b2f-92f6-d054eb0bda77">
+</kbd>
+
 ## Setup
 ```sh
 npm install
