@@ -3,9 +3,8 @@ ChatGPTのようなリアルタイムで文字が入力されていくUIを実�
 Server Sent Event (SSE)の実装方法をいくつか試しました。
 
 <kbd>
-<img width="575" alt="image" src="https://github.com/Rasukarusan/server-sent-events-example/assets/17779386/8759618b-65fe-469e-bdaf-72e218348522">
+<img width="575" alt="image" src="https://github.com/Rasukarusan/server-sent-events-example/assets/17779386/1517f13e-dfb5-452d-9802-e067bebe3288">
 </kbd>
-
 
 ## Setup
 ```sh
