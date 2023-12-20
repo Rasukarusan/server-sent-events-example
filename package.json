@@ -10,6 +10,7 @@
   },
   "dependencies": {
     "@microsoft/fetch-event-source": "^2.0.1",
+    "ai": "^2.2.29",
     "next": "14.0.4",
     "react": "^18",
     "react-dom": "^18"

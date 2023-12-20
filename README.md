@@ -15,8 +15,6 @@ npm run dev
 
 ## Usage
 
-- ブラウザでのアクセス方法:
-
 ### EventSourceを使用
 http://localhost:3000/
 
@@ -26,7 +24,10 @@ http://localhost:3000/fetch
 ### fetch-event-sourceを使用
 http://localhost:3000/fetch-event-source
 
-- コマンドラインでのアクセス方法 (curl):
+### Vercel AI SDK を使用
+http://localhost:3000/vercel-ai-sdk
+
+### コマンドラインでのアクセス方法 (curl):
 
 ```sh
 $ curl "http://localhost:3000/api/events"
@@ -45,5 +46,6 @@ $ curl "http://localhost:3000/api/events"
 ## Reference
 
 - [Azure/fetch-event-source](https://github.com/Azure/fetch-event-source)
+- [Vercel AI SDK](https://sdk.vercel.ai/docs)
 - [リアル業務でChatGPT APIを使うコツ](https://zenn.dev/teramotodaiki/scraps/f016ed832d6f0d)
 
