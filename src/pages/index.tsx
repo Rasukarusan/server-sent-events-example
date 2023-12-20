@@ -1,6 +1,7 @@
 import Link from 'next/link';
 import { useEffect, useState } from 'react';
-import {Cursor} from '@/components/Cursor';
+import { Cursor } from '@/components/Cursor';
+import { Links } from '@/components/Links';
 
 /**
  * EventSourceを使うパターン
@@ -22,9 +23,7 @@ export default function Home() {
 
   return (
    <div>
-      <Link href="/">EventSourceを使う版</Link>
-      <br />
-      <Link href="/fetch">fetchを使う版</Link>
+      <Links />
       <p>{message}<Cursor /></p>
     </div>
   );
