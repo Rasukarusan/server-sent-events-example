@@ -1,5 +1,6 @@
 import Link from 'next/link'
 import { useEffect, useState } from 'react'
+import { Cursor } from '@/components/Cursor'
 
 /**
  * fetchを使うパターン
@@ -38,18 +39,7 @@ export default function Home() {
       <div>
         <button onClick={onClick}>START</button>
       </div>
-        <p>{message}<span className="cursor">■</span></p>
-        <style jsx>{`
-          .cursor {
-            opacity: 1
-            animation: blink-animation 0.5s steps(5, start) infinite
-          }
-          @keyframes blink-animation {
-            to {
-              opacity: 0
-            }
-          }
-        `}</style>
+      <p>{message}<Cursor /></p>
     </div>
   )
 }
