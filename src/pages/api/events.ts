@@ -16,12 +16,14 @@ export default function handler(
       res.write(`data: ${text[index]}\n\n`);
       index++;
     } else {
+      console.log('done')
       clearInterval(intervalId);
       res.end();
     }
   }, 100);
 
   req.on('close', () => {
+    console.log('close')
     clearInterval(intervalId);
     res.end();
   });

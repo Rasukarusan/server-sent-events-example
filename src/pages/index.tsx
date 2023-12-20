@@ -1,5 +1,9 @@
+import Link from 'next/link';
 import { useEffect, useState } from 'react';
 
+/**
+ * EventSourceを使うパターン
+ */
 export default function Home() {
   const [message, setMessage] = useState('');
 
@@ -16,7 +20,11 @@ export default function Home() {
   }, []);
 
   return (
-   <div className="message-box">
+   <div>
+      <Link href="/">EventSourceを使う版</Link>
+      <br />
+      <Link href="/fetch">fetchを使う版</Link>
+
       <p>{message}<span className="cursor">■</span></p>
 
       <style jsx>{`
