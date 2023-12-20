@@ -17,6 +17,7 @@ export default function handler(
       index++;
     } else {
       console.log('done')
+      res.write(`data: [DONE]\n\n`); // ChatGPTっぽく終端文字を挿入
       clearInterval(intervalId);
       res.end();
     }
