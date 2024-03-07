@@ -4,6 +4,10 @@ Server Sent Event (SSE)の実装方法をいくつか試しました。
 
 https://server-sent-events-example.vercel.app/
 
+APIとしても動作するようになっているので、SSEの実験したい方は下記エンドポイントで実験できます。
+
+https://server-sent-events-example.vercel.app/api/events-for-vercel
+
 <kbd>
 <img width="575" alt="image" src="https://github.com/Rasukarusan/server-sent-events-example/assets/17779386/1517f13e-dfb5-452d-9802-e067bebe3288">
 </kbd>
@@ -31,7 +35,7 @@ http://localhost:3000/vercel-ai-sdk
 ### コマンドラインでのアクセス方法 (curl):
 
 ```sh
-$ curl "http://localhost:3000/api/events"
+$ curl "http://localhost:3000/api/events-for-vercel"
 
 # data:
 # 
