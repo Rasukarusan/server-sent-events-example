@@ -1,35 +1,35 @@
-import { useEffect, useState } from 'react'
-import { Cursor } from '@/components/Cursor'
-import { Links } from '@/components/Links'
+import { useEffect, useState } from "react";
+import { Cursor } from "@/components/Cursor";
+import { Links } from "@/components/Links";
 
 /**
  * fetchを使うパターン
  * @see https://zenn.dev/teramotodaiki/scraps/f016ed832d6f0d
  */
 export default function Home() {
-  const [message, setMessage] = useState('')
+  const [message, setMessage] = useState("");
 
   const onClick = async () => {
-    const response = await fetch('/api/events', {
-      method: 'POST',
+    const response = await fetch("/api/events-for-vercel", {
+      method: "POST",
       headers: {
-        'Content-Type': 'application/json'
+        "Content-Type": "application/json",
       },
-      body: JSON.stringify({ prompt: 'hoge' }) // GPTのAPIの場合はここでプロンプトを指定
-    })
-    const reader = response.body?.getReader()
-    if (!reader) return
+      body: JSON.stringify({ prompt: "hoge" }), // GPTのAPIの場合はここでプロンプトを指定
+    });
+    const reader = response.body?.getReader();
+    if (!reader) return;
 
-    let decoder = new TextDecoder()
+    let decoder = new TextDecoder();
     while (true) {
-      const { done, value } = await reader.read()
-      if (done) break
-      if (!value) continue
-      const lines = decoder.decode(value)
-      const text = lines.split('data: ')[1].trim()
-      setMessage(prev => prev + text)
+      const { done, value } = await reader.read();
+      if (done) break;
+      if (!value) continue;
+      const lines = decoder.decode(value);
+      const text = lines.split("data: ")[1].trim();
+      setMessage((prev) => prev + text);
     }
-  }
+  };
 
   return (
     <div>
@@ -37,7 +37,10 @@ export default function Home() {
       <div>
         <button onClick={onClick}>START</button>
       </div>
-      <p>{message}<Cursor /></p>
+      <p>
+        {message}
+        <Cursor />
+      </p>
     </div>
-  )
+  );
 }

@@ -1,19 +1,19 @@
-import Link from 'next/link';
-import { useEffect, useState } from 'react';
-import { Cursor } from '@/components/Cursor';
-import { Links } from '@/components/Links';
+import Link from "next/link";
+import { useEffect, useState } from "react";
+import { Cursor } from "@/components/Cursor";
+import { Links } from "@/components/Links";
 
 /**
  * EventSourceを使うパターン
  */
 export default function Home() {
-  const [message, setMessage] = useState('');
+  const [message, setMessage] = useState("");
 
   useEffect(() => {
-    const eventSource = new EventSource('/api/events');
+    const eventSource = new EventSource("/api/events-for-vercel");
 
     eventSource.onmessage = (event) => {
-      setMessage(prev => prev + event.data);
+      setMessage((prev) => prev + event.data);
     };
 
     return () => {
@@ -22,9 +22,12 @@ export default function Home() {
   }, []);
 
   return (
-   <div>
+    <div>
       <Links />
-      <p>{message}<Cursor /></p>
+      <p>
+        {message}
+        <Cursor />
+      </p>
     </div>
   );
 }

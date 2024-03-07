@@ -31,6 +31,8 @@ const handler = async (req: Request): Promise<Response> => {
     },
   });
 
-  return new Response(stream);
+  return new Response(stream, {
+    headers: { "Content-Type": "text/event-stream; charset=utf-8" },
+  });
 };
 export default handler;
