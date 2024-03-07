@@ -2,6 +2,8 @@
 ChatGPTのようなリアルタイムで文字が入力されていくUIを実装するためのデモ。  
 Server Sent Event (SSE)の実装方法をいくつか試しました。
 
+https://server-sent-events-example.vercel.app/
+
 <kbd>
 <img width="575" alt="image" src="https://github.com/Rasukarusan/server-sent-events-example/assets/17779386/1517f13e-dfb5-452d-9802-e067bebe3288">
 </kbd>
